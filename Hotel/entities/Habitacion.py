@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field, PositiveInt, validator
 class Habitacion(Base):
     __tablename__ = "habitaciones"
 
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    id_habitacion = Column(Integer, primary_key=True, index=True, autoincrement=True)
     numero = Column(Integer, unique=True, nullable=False)
     tipo = Column(String, nullable=False)
     precio = Column(Float, nullable=False)
