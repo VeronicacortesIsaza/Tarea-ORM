@@ -10,6 +10,11 @@ class Habitacion(Base):
     tipo = Column(String, nullable=False)
     precio = Column(Float, nullable=False)
     disponible = Column(Boolean, default=True)
+    id_usuario_crea = Column(uuid, not null)
+    id_usuario_edita = Column(uuid, Default null)
+    Fecha_creacion = Column(timestams, now())
+    Fecha_edicion = Column(timestams, Default null)
+    
 
 # ------------------ Pydantic Schemas ------------------
 
